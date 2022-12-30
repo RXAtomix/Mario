@@ -1,1 +1,2 @@
-# Mario
+# Projet correspondant au test de l'entreprise Appartoo
+Fait par Romain Le Guen, du 30/12/22 jusqu'au ...
