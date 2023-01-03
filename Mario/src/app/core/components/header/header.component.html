@@ -1,1 +1,9 @@
-<p>header works!</p>
+<header>
+  <nav>
+    <input id="searchbar" type="text" name="search" placeholder="Search mario..">
+    <a routerLink="login" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Connexion</a>
+    <a routerLink="inscription" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Inscription</a>
+    <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" *ngIf="connected">Home</a>
+    <button *ngIf="connected">Déconnexion</button>
+  </nav>
+</header>

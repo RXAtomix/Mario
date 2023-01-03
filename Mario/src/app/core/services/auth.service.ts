@@ -4,6 +4,20 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AuthService {
+  token= false;
 
-  constructor() { }
+  login() {
+    this.token = true;
+    const userTokenSerialized: string = JSON.stringify(this.token);
+    localStorage.setItem('userToken',userTokenSerialized);
+    console.log('tokenin:',this.token);
+  }
+
+  getToken(): boolean {
+    const userTokenLocalStorage = localStorage.getItem('userToken');
+    const userToken = JSON.parse(userTokenLocalStorage!);
+    console.log('tokenget:',userToken);
+    return userToken;
+  }
+
 }

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { InscriptionComponent } from './components/inscription/inscription.component';
+import { InscriptionComponent } from './components/inscription.component';
 
 
 
@@ -10,6 +10,9 @@ import { InscriptionComponent } from './components/inscription/inscription.compo
   ],
   imports: [
     CommonModule
+  ],
+  exports:[
+    InscriptionComponent
   ]
 })
 export class InscriptionModule { }
