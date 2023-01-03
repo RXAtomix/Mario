@@ -1,9 +1,11 @@
 <header>
   <nav>
+    <p *ngIf="connected">{{name}}</p>
+    <p *ngIf="connected">{{role}}</p>
     <input id="searchbar" type="text" name="search" placeholder="Search mario..">
-    <a routerLink="login" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Connexion</a>
-    <a routerLink="inscription" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Inscription</a>
+    <a routerLink="login" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" *ngIf="!connected">Connexion</a>
+    <a routerLink="inscription" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" *ngIf="!connected">Inscription</a>
     <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" *ngIf="connected">Home</a>
-    <button *ngIf="connected">Déconnexion</button>
+    <button (click)="disconnectUser" *ngIf="connected">Déconnexion</button>
   </nav>
 </header>
