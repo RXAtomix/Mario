@@ -1,1 +1,16 @@
-<p>inscription works!</p>
+<body>
+  <form>
+      <input name="mail" placeholder="adresse mail" type="email">
+      <input name="name" placeholder="nom de votre Mario">
+      <input name="mdp" placeholder="mot de passe">
+      <input name="mpd2" placeholder = "répétez votre mot de passe">
+      <select name="role" placeholder="role de votre Mario">
+        <option>Guerrier</option>
+        <option>Alchimiste</option>
+        <option>Sorcier</option>
+        <option>Espion</option>
+        <option>Enchanteur</option>
+      </select>
+      <button (click)="onSubmitInscr()">Inscription</button>
+  </form>
+</body>

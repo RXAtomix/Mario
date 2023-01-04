@@ -15,13 +15,13 @@ export class HeaderComponent {
   connected !: boolean;
   name !: string;
   role !: string;
+  //connected = false;
   @Input() mario!: Mario;
 
   constructor(private router: Router, private auth: AuthService) {}
 
   ngOnInit(): void {
-    localStorage.removeItem('userToken');
-    this.connected = false;
+
   }
 
   ngDoCheck (changes: SimpleChanges){
